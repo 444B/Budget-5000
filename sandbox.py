@@ -1,3 +1,14 @@
-budget = {"monthly_income": 100, "bills":{"water":0, "electric":0,"rent":0,"cellphone":0, "internet":0}}
+budget = {
+    "monthly_income": 100,
+    "bills": {
+        "water": 1,
+        "electric": 24,
+        "rent": 2,
+        "cellphone": 600,
+        "internet": 9
+    }
+}
 
+print(budget["monthly_income"])
+budget["monthly_income"] = 500
 print(budget["monthly_income"])
