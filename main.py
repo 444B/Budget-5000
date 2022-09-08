@@ -19,14 +19,13 @@ budget = {
 
 def income_calculator(income_data):
     # check if argument is an int
-    # what if this is 0??
-    if type(income_data) == int:
+    if type(income_data) == int and > 0:
         calc_income = income_data / 12
         # Set monthly income in budget to calculated income
         budget["monthly_income"] = calc_income
         return calc_income
     else:
-        print("Please input a number")
+        print("Please input a valid number")
 
 
 def bill_total(bill_data, income_data):
@@ -50,7 +49,6 @@ def debt_checker(total_after_bills):
 
 # new function to calculate the percentage of income used to cover expenses
 def expense_percentage(bill_data, income_data):
-    # no need to assign variables and then return them
     return (bill_data / income_data) * 100
 
 
@@ -70,19 +68,8 @@ def main():
     {expense_percentage(budget["monthly_expense"], budget["monthly_income"])}
     """)
 
-    print(budget["monthly_expense"])
-    print(budget["monthly_income"])
-
 
 if __name__ == "__main__":
     main()
 
 # Notes
-# I thought we would have to rewrite the whole thing but actually
-# its only the way we refference the list that needed to change
-# I added a name+main thing to encourage good habits even though it might not be necessary now
-# Also, some light formatting in the CLI output to contextualize the values returned
-
-# You can use f-strings and """ """ to make multi line print statements
-
-#
