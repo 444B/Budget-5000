@@ -1,4 +1,8 @@
-
+# TODO: Try making the income calc loop until a correct input was given
+# think about different inputs like 1 obviously isnt going to do anything
+# also try doing this without assigning values to the budget dictionary
+# also also make a function that validates the income input instead of a long if statement
+# also also also see if you can make a function to get the values for EACH bills property ;)
 
 budget = {
     "monthly_income": 0,
@@ -15,6 +19,7 @@ budget = {
 
 def income_calculator(income_data):
     # check if argument is an int
+    # what if this is 0??
     if type(income_data) == int:
         calc_income = income_data / 12
         # Set monthly income in budget to calculated income
@@ -45,34 +50,26 @@ def debt_checker(total_after_bills):
 
 # new function to calculate the percentage of income used to cover expenses
 def expense_percentage(bill_data, income_data):
-    yearly_percentage = (bill_data / income_data) * 100
-    return yearly_percentage
+    # no need to assign variables and then return them
+    return (bill_data / income_data) * 100
 
 
 def main():
-    # Collect income
+    # print all the things together
     print(f"""
     Your monthly income is:
     {income_calculator(int(input("What is your yearly income, before tax?")))}
-    """)
 
-    # Show Total Amount after bills
-    print(f"""
     Total Amount after bills: 
     {bill_total(budget["bills"], budget["monthly_income"])}
-    """)
 
-    # Show if in debt
-    print(f"""
     Debt Checker: 
     {debt_checker(bill_total(budget["bills"], budget["monthly_income"]))}
-    """)
 
-    # Show percentage of income that is used on yearly expenses
-    print(f"""
     Total percentage of income payed to bills:
     {expense_percentage(budget["monthly_expense"], budget["monthly_income"])}
     """)
+
     print(budget["monthly_expense"])
     print(budget["monthly_income"])
 
