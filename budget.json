@@ -1,0 +1,13 @@
+{
+    "budget" : {
+        "monthly_income": 0,
+        "monthly_expense": 0,
+        "bills": {
+            "water": 1,
+            "electric": 24,
+            "rent": 2,
+            "cellphone": 600,
+            "internet": 9
+        }
+    }
+}

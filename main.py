@@ -1,8 +1,10 @@
-# TODO: Try making the income calc loop until a correct input was given
-# think about different inputs like 1 obviously isnt going to do anything
-# also try doing this without assigning values to the budget dictionary
-# also also make a function that validates the income input instead of a long if statement
-# also also also see if you can make a function to get the values for EACH bills property ;)
+# TODO: Try making the income calc loop until a correct input was given #
+# think about different inputs like 1 obviously isnt going to do anything #
+# also try doing this without assigning values to the budget dictionary #
+# also also make a function that validates the income input instead of a long if statement #
+# also also also see if you can make a function to get the values for EACH bills property ;) #
+# also also also also try getting the budget information from the json file and write the final monthly #
+# income/expenses back to the file or create a new one! :) #
 
 budget = {
     "monthly_income": 0,
